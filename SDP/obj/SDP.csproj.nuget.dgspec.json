@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\sem6\\SDP\\SDP\\SDP.csproj": {}
+    "D:\\Dhruval\\github\\Shop-Management-System\\SDP\\SDP.csproj": {}
   },
   "projects": {
-    "D:\\sem6\\SDP\\SDP\\SDP.csproj": {
+    "D:\\Dhruval\\github\\Shop-Management-System\\SDP\\SDP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\sem6\\SDP\\SDP\\SDP.csproj",
+        "projectUniqueName": "D:\\Dhruval\\github\\Shop-Management-System\\SDP\\SDP.csproj",
         "projectName": "SDP",
-        "projectPath": "D:\\sem6\\SDP\\SDP\\SDP.csproj",
+        "projectPath": "D:\\Dhruval\\github\\Shop-Management-System\\SDP\\SDP.csproj",
         "packagesPath": "C:\\Users\\Dhruval\\.nuget\\packages\\",
-        "outputPath": "D:\\sem6\\SDP\\SDP\\obj\\",
+        "outputPath": "D:\\Dhruval\\github\\Shop-Management-System\\SDP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dhruval\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-SDP-AEA9320F-77E7-463C-A6F7-4F26A394519D</UserSecretsId>
+    <UserSecretsId>aspnet-SDP-CC54433E-7C52-476B-9D44-F833439FB6B2</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

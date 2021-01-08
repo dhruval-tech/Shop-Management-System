@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-SDP-AEA9320F-77E7-463C-A6F7-4F26A394519D")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-SDP-CC54433E-7C52-476B-9D44-F833439FB6B2")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("SDP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
