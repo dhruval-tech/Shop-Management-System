@@ -1,0 +1,47 @@
+﻿@model SDP.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "login";
+}
+
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/breadcumb3.jpg);">
+    <div class="bradcumbContent">
+        <p>See what’s new</p>
+        <h2>Login</h2>
+    </div>
+</section>
+
+<section class="login-area section-padding-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="login-content">
+                    <h3>Welcome Back</h3>
+                    <!-- Login Form -->
+                    <div class="login-form">
+                        <form method="post">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Email">Email address</label>
+                                <input asp-for="Email" type="email" class="form-control" placeholder="Enter E-mail" required>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                                <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password">Password</label>
+                                <input class="form-control" asp-for="Password" placeholder="Password" required>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div>
+                                <a asp-controller="Home" asp-action="ForgotPassword">Forgot Password?</a>
+                            </div>
+                            <button type="submit" class="btn oneMusic-btn mt-30">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
