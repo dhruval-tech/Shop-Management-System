@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SDP.Models;
 
 namespace SDP.Data
 {
@@ -12,5 +13,9 @@ namespace SDP.Data
             : base(options)
         {
         }
+        public DbSet<product> products { get; set; }
+        public DbSet<customer> customers { get; set; }
+        public DbSet<staff> staffs { get; set; }
+
     }
 }
