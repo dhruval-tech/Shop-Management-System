@@ -1,0 +1,61 @@
+﻿@model SDP.Models.product
+@{
+    ViewData["Title"] = "UpdateProduct";
+}
+
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/breadcumb3.jpg);">
+    <div class="bradcumbContent">
+        <p>See what’s new</p>
+        <h2>Add Product</h2>
+    </div>
+</section>
+<!-- ##### Breadcumb Area End ##### -->
+<!-- ##### Login Area Start ##### -->
+<section class="login-area section-padding-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="login-content">
+                    <h3>Welcome </h3>
+                    <!-- Login Form -->
+                    <div class="login-form">
+                            <form asp-action="UpdateProduct">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" asp-for="productId" />
+                                <div class="form-group">
+                                    <label asp-for="Name" class="control-label"></label>
+                                    <input asp-for="Name" class="form-control" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Category" class="control-label"></label>
+                                    <input asp-for="Category" class="form-control" />
+                                    <span asp-validation-for="Category" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="originalPrice" class="control-label"></label>
+                                    <input asp-for="originalPrice" class="form-control" />
+                                    <span asp-validation-for="originalPrice" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="MRP" class="control-label"></label>
+                                    <input asp-for="MRP" class="form-control" />
+                                    <span asp-validation-for="MRP" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Quantity" class="control-label"></label>
+                                    <input asp-for="Quantity" class="form-control" />
+                                    <span asp-validation-for="Quantity" class="text-danger"></span>
+                                </div>
+                                <button type="submit" class="btn oneMusic-btn mt-30">Update Product</button>
+                            </form>
+                            <div>
+                                <a asp-action="Index">Back to List</a>
+                            </div>
+
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

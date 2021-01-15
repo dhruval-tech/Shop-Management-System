@@ -1,0 +1,64 @@
+﻿@model SDP.Models.product
+@{
+    ViewData["Title"] = "AddProduct";
+}
+
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/breadcumb3.jpg);">
+    <div class="bradcumbContent">
+        <p>See what’s new</p>
+        <h2>Add Product</h2>
+    </div>
+</section> 
+<!-- ##### Breadcumb Area End ##### -->
+<!-- ##### Login Area Start ##### -->
+<section class="login-area section-padding-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="login-content">
+                    <h3>Welcome </h3>
+                    <!-- Login Form -->
+                    <div class="login-form">
+                        <form method="post" asp-action="AddProduct">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Name">Product Name</label>
+                                <input type="text" class="form-control" asp-for="Name" aria-describedby="namelHelp" placeholder="Enter Product Name" required>
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                                <small id="nameHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>Be specific.</small>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Category">Category</label>
+                                <input type="text" class="form-control" asp-for="Category" placeholder="Category" required>
+                                <span asp-validation-for="Category" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="originalPrice">Original Price</label>
+                                <input type="number" class="form-control" asp-for="originalPrice" placeholder="Original Price" required>
+                                <span asp-validation-for="originalPrice" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MRP">MRP</label>
+                                <input type="number" class="form-control" asp-for="MRP" placeholder="Maximum Retail Price" required>
+                                <span asp-validation-for="MRP" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Quantity">Quantity</label>
+                                <input type="number" class="form-control" asp-for="Quantity" placeholder="Quantity" required>
+                                <span asp-validation-for="Quantity" class="text-danger"></span>
+                            </div>
+ 
+                            @*<div class="form-group">
+            <input type="radio" asp-for="Role" name="role" value="Admin">
+            <label asp-for="Role">Admin</label><br>
+            <input type="radio" asp-for="Role" name="role" value="Customer">
+            <label asp-for="Role">Customer</label><br>
+        </div>*@
+                            <button type="submit" class="btn oneMusic-btn mt-30">Add Product</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
