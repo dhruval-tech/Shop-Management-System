@@ -26,10 +26,33 @@ using SDP.Models;
 #line default
 #line hidden
 #nullable disable
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7991fb78734b09a989a0240064755f8c074f4b79", @"/Views/Product/SearchProduct.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"943bab9f04d542d0a76c04c6057276047ffe166c", @"/Views/Product/SearchProduct.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d05cba2b556eab87c229afa8de49a53b5eb5e26e", @"/Views/_ViewImports.cshtml")]
     public class Views_Product_SearchProduct : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<SDP.Models.product>>
     {
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "UpdateProduct", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "DeleteProduct", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        #line hidden
+        #pragma warning disable 0649
+        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
+        #pragma warning restore 0649
+        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner __tagHelperRunner = new global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner();
+        #pragma warning disable 0169
+        private string __tagHelperStringValueBuffer;
+        #pragma warning restore 0169
+        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager __backed__tagHelperScopeManager = null;
+        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager __tagHelperScopeManager
+        {
+            get
+            {
+                if (__backed__tagHelperScopeManager == null)
+                {
+                    __backed__tagHelperScopeManager = new global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager(StartTagHelperWritingScope, EndTagHelperWritingScope);
+                }
+                return __backed__tagHelperScopeManager;
+            }
+        }
+        private global::Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
@@ -44,11 +67,12 @@ using SDP.Models;
 #nullable disable
             WriteLiteral(@"
 <h1>SearchProduct</h1>
-
 <div>
     <h4>product</h4>
     <hr />
 
+    <input placeholder=""Category"" type=""text"" id=""myCategory"">
+    <input type=""text"" id=""myProduct"" placeholder=""Product"">
     <table>
         <tr>
             <th>ProductId</th>
@@ -85,7 +109,7 @@ using SDP.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("</td>\r\n        <td>");
+            WriteLiteral("</td>\r\n                <td class=\"productName\">");
 #nullable restore
 #line 29 "D:\Dhruval\github\Shop-Management-System\SDP\Views\Product\SearchProduct.cshtml"
        Write(product.Category);
@@ -93,7 +117,7 @@ using SDP.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("</td>\r\n        <td>");
+            WriteLiteral("</td>\r\n                <td class=\"category\">");
 #nullable restore
 #line 30 "D:\Dhruval\github\Shop-Management-System\SDP\Views\Product\SearchProduct.cshtml"
        Write(product.originalPrice);
@@ -101,7 +125,7 @@ using SDP.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("</td>\r\n        <td>");
+            WriteLiteral("</td>\r\n                <td>");
 #nullable restore
 #line 31 "D:\Dhruval\github\Shop-Management-System\SDP\Views\Product\SearchProduct.cshtml"
        Write(product.MRP);
@@ -109,7 +133,7 @@ using SDP.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("</td>\r\n        <td>");
+            WriteLiteral("</td>\r\n                <td>");
 #nullable restore
 #line 32 "D:\Dhruval\github\Shop-Management-System\SDP\Views\Product\SearchProduct.cshtml"
        Write(product.Quantity);
@@ -117,8 +141,17 @@ using SDP.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("</td>\r\n");
-            WriteLiteral("    </tr>\r\n");
+            __tagHelperStringValueBuffer = EndWriteTagHelperAttribute();
+            __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.RouteValues["id"] = __tagHelperStringValueBuffer;
+            __tagHelperExecutionContext.AddTagHelperAttribute("asp-route-id", __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.RouteValues["id"], global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+            if (!__tagHelperExecutionContext.Output.IsContentModified)
+            {
+                await __tagHelperExecutionContext.SetOutputContentAsync();
+            }
+            Write(__tagHelperExecutionContext.Output);
+            __tagHelperExecutionContext = __tagHelperScopeManager.End();
+            WriteLiteral(" </td>\r\n            </tr>\r\n");
 #nullable restore
 #line 36 "D:\Dhruval\github\Shop-Management-System\SDP\Views\Product\SearchProduct.cshtml"
         }
@@ -126,7 +159,7 @@ using SDP.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("    </table>\r\n    \r\n</div>\r\n\r\n");
+            WriteLiteral("    </table>\r\n\r\n</div>\r\n\r\n");
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
