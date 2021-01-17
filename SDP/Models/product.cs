@@ -14,6 +14,7 @@ namespace SDP.Models
         public string Category { get; set; }
         public int originalPrice { get; set; }
         public int MRP { get; set; }
-        public int  Quantity { get; set; }
+        public int Quantity { get; set;  }
+        public string Photopath { get; set; }
     }
 }
