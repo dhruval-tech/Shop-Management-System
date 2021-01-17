@@ -77,8 +77,8 @@
                                         </ul>
 
                                     </li>
-                                    <li><a asp-action="Events" asp-controller="Home">Events</a></li>
-                                    <li><a asp-action="Events" asp-controller="Home">News</a></li>
+                                    @*<li><a asp-action="Events" asp-controller="Home">Events</a></li>
+                                        <li><a asp-action="Events" asp-controller="Home">News</a></li>*@
                                     <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
                                 </ul>
                                 <partial name="_LoginPartial" />
@@ -119,6 +119,7 @@
 
     @RenderBody()
 
+
     @*<footer class="border-top footer text-muted">
             <div class="container">
                 &copy; 2020 - gaana - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -142,8 +143,8 @@
                     <div class="footer-nav">
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Albums</a></li>
-                            <li><a href="#">Events</a></li>
+                            @*<li><a href="#">Albums</a></li>
+                                <li><a href="#">Events</a></li>*@
                             <li><a href="#">News</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul>
@@ -152,11 +153,13 @@
             </div>
         </div>
     </footer>
+
     <script src="/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="/js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->
     <script src="/js/bootstrap/bootstrap.min.js"></script>
+
     <!-- All Plugins js -->
     <script src="/js/plugins/plugins.js"></script>
     <!-- Active js -->
@@ -164,6 +167,11 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+    @if (IsSectionDefined("Scripts"))
+    {
+        @RenderSection("Scripts", required: true)
+
+    }
+
 </body>
 </html>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<SDP.Models.product>
+@{
+    ViewData["Title"] = "ViewProducts";
+
+}
+
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/breadcumb3.jpg);">
+    <div class="bradcumbContent">
+        <p>See what’s new</p>
+        <h2>Products</h2>
+    </div>
+</section>
+<section class="events-area section-padding-100">
+    <div class="container">
+        <div class="row">
+
+            <!-- Product Area -->
+            @foreach (var arr in Model)
+                {
+                    var photoPath = "~/img/" + (arr.Photopath);
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-event-area mb-30">
+                        <div class="event-thumbnail">
+                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalloginform" style="background-color: lightslategray ; border-color: brown"><img src="@photoPath " asp-append-version="true"></button>
+                        </div>
+                        <div class="event-text">
+                            <h4>@Html.DisplayFor(x => arr.Name) </h4>
+                            <div class="event-meta-data">
+                                @*<a href="#" class="event-place">@Html.DisplayFor(x => arr.Name) </a>*@
+                                <a href="#" class="event-date">@Html.DisplayFor(x => arr.Category) </a>
+                            </div>
+                            <div class="event-meta-data">
+                                <a href="#" class="event-date">@Html.DisplayFor(x => arr.originalPrice) </a>
+                            </div>
+                            <div class="event-meta-data">
+                                <a href="#" class="event-date">@Html.DisplayFor(x => arr.MRP) </a>
+                            </div>
+                            <div class="event-meta-data">
+                                <p class="font-color:white;">Quantity</p><a href="#" class="event-date">@Html.DisplayFor(x => arr.Quantity) </a>
+                            </div>
+                            @*<a href="#" class="btn see-more-btn">Book Now</a>*@
+                        </div>
+                    </div>
+                </div>
+            }
+            <!-- Single Event Area -->
+
+
+        </div>
+    </div>
+</section>
+

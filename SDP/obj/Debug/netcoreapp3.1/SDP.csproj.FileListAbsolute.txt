@@ -324,3 +324,8 @@ G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Pr
 G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\DeleteProduct.cshtml.g.cs
 G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\UpdateProduct.cshtml.g.cs
 G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\SearchProduct.cshtml.g.cs
+D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\AddProduct.cshtml.g.cs
+D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\DeleteProduct.cshtml.g.cs
+D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\SearchProduct.cshtml.g.cs
+D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\UpdateProduct.cshtml.g.cs
+D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\ViewProducts.cshtml.g.cs
