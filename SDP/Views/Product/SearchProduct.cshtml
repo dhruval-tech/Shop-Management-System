@@ -5,11 +5,12 @@
 }
 
 <h1>SearchProduct</h1>
-
 <div>
     <h4>product</h4>
     <hr />
 
+    <input placeholder="Category" type="text" id="myCategory">
+    <input type="text" id="myProduct" placeholder="Product">
     <table>
         <tr>
             <th>ProductId</th>
@@ -23,18 +24,18 @@
         </tr>
         @foreach (var product in Model)
         {
-    <tr>
-        <td>@product.productId</td>
-        <td>@product.Name</td>
-        <td>@product.Category</td>
-        <td>@product.originalPrice</td>
-        <td>@product.MRP</td>
-        <td>@product.Quantity</td>
-       @*<td><a asp-action="Edit" asp-route-id="@Model.productId">Edit</a></td>
-       <td><a asp-action="Delete" asp-route-id="@Model.productId">Delete</a> </td>*@
-    </tr>
+            <tr class="rw">
+                <td>@product.productId</td>
+                <td class="productName">@product.Name</td>
+                <td class="category">@product.Category</td>
+                <td>@product.originalPrice</td>
+                <td>@product.MRP</td>
+                <td>@product.Quantity</td>
+                <td><a asp-action="UpdateProduct" asp-route-id="@product.productId">Edit</a></td>
+                    <td><a asp-action="DeleteProduct" asp-route-id="@product.productId">Delete</a> </td>
+            </tr>
         }
     </table>
-    
+
 </div>
 
