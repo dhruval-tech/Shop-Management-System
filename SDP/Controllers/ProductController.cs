@@ -33,17 +33,65 @@ namespace SDP.Controllers
             _context.SaveChanges();
             return View();
         }
-
-        public IActionResult UpdateProduct()
+        [HttpGet]
+        public async Task<IActionResult>  UpdateProduct(int ?id)
         {
-            return View();
+            product pd = await _context.products.FindAsync(id);
+
+            if (pd == null)
+            {
+                return NotFound();
+            }
+
+            return View(pd);
+        }
+        [HttpPost]
+
+        public async Task<IActionResult> UpdateProduct(product pd)
+        {
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(pd);
+                    await _context.SaveChangesAsync();
+                }
+                catch (Exception)
+                {
+                    return NotFound();
+                }
+                return RedirectToAction(nameof(SearchProduct));
+            }
+
+            return View(pd);
         }
 
-        public IActionResult DeleteProduct()
+        [HttpGet]
+        public async Task<IActionResult> DeleteProduct(int ?id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+            product pd = await _context.products.FindAsync(id);
+            if (pd == null)
+            {
+                return NotFound();
+            }
+
+            return View(pd);
+        }
+        [HttpPost]
+        public async Task<IActionResult> DeleteProduct(int id)
+        {
+            var pd = await _context.products.FindAsync(id);
+            _context.products.Remove(pd);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(SearchProduct));
         }
 
+        
         public IActionResult SearchProduct()
         {
 
