@@ -1,0 +1,62 @@
+﻿@model SDP.ViewModels.CustomerViewModel
+@{
+    ViewData["Title"] = "AddCustomer";
+}
+
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/breadcumb3.jpg);">
+    <div class="bradcumbContent">
+        <!--<p>See what’s new</p>-->
+        <h2>Add Customer</h2>
+    </div>
+</section>
+
+<section class="login-area section-padding-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="login-content">
+                    <h3>Welcome </h3>
+                    <!-- Login Form -->
+                    <div class="login-form">
+                        <form enctype="multipart/form-data" method="post" asp-action="AddCustomer">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Name">Customer Name</label>
+                                <input type="text" class="form-control" asp-for="Name" aria-describedby="namelHelp" placeholder="Enter Customer Name" required>
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                                <small id="nameHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>Be specific.</small>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="email">Email</label>
+                                <input type="email" class="form-control" asp-for="email" placeholder="Email" required>
+                                <span asp-validation-for="email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="contact">Contact Number</label>
+                                <input type="number" class="form-control" asp-for="contact" pattern=".{10}" placeholder="Contact Number" required>
+                                <span asp-validation-for="contact" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="address">Address</label>
+                                <input type="text" class="form-control" asp-for="address" placeholder="Address" required>
+                                <span asp-validation-for="address" class="text-danger"></span>
+                            </div>
+
+                            <button type="submit" class="btn oneMusic-btn mt-30">Add Customer</button>
+                            @*@section Scripts{
+        <script>
+            $(document).ready(function () {
+                $('.custom-file-input').on("change", function () {
+                    var filename = $(this).val().split("\\").pop();
+                    $(this).next('.custom-file-label').html(filename);
+                });
+            });
+        </script>*@
+                            <!-- }-->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

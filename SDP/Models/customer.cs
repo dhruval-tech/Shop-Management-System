@@ -12,6 +12,7 @@ namespace SDP.Models
         public string email { get; set; }
         public int contact { get; set; }
         public string address { get; set; }
-        public string productName { get; set; }
+
+       //public string productName { get; set; }
     }
 }
