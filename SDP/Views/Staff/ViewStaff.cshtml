@@ -1,0 +1,40 @@
+﻿@model List<SDP.Models.staff>
+
+@{
+    ViewData["Title"] = "SearchStaff";
+}
+
+<h1>View Staff</h1>
+
+<div>
+    </hr>
+    <table>
+        <tr>
+            <th>StaffId</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Salary</th>
+            <th>Address</th>
+            <th>Role</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        @foreach (var staff in Model)
+        {
+            <tr class="rw">
+                <td>@staff.staffId</td>
+                <td>@staff.name</td>
+                <td>@staff.email</td>
+                <td>@staff.contact</td>
+                <td>@staff.salary</td>
+                <td>@staff.address</td>
+                <td>@staff.role</td>
+                <td><a asp-action="UpdateStaff" asp-route-id="@staff.staffId">Edit</a></td>
+                <td><a asp-action="DeleteStaff" asp-route-id="@staff.staffId">Delete</a> </td>
+            </tr>
+        }
+    </table>
+
+</div>
+

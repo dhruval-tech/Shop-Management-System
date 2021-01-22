@@ -329,6 +329,13 @@ D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\SearchProduct.cshtml.g.cs
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\UpdateProduct.cshtml.g.cs
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\ViewProducts.cshtml.g.cs
+<<<<<<< HEAD
+G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\ViewProducts.cshtml.g.cs
+G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Staff\UpdateStaff.cshtml.g.cs
+G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Staff\ViewStaff.cshtml.g.cs
+G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Staff\AddStaff.cshtml.g.cs
+G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Staff\DeleteStaff.cshtml.g.cs
+=======
 D:\sem 6\SDP\Project\Shop-Management-System\SDP\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\sem 6\SDP\Project\Shop-Management-System\SDP\bin\Debug\netcoreapp3.1\appsettings.json
 D:\sem 6\SDP\Project\Shop-Management-System\SDP\bin\Debug\netcoreapp3.1\SDP.StaticWebAssets.xml
@@ -497,3 +504,4 @@ D:\sem 6\SDP\project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Vi
 D:\sem 6\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Customer\PurchaseProduct.cshtml.g.cs
 D:\sem 6\SDP\project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\SDP.csprojAssemblyReference.cache
 D:\sem 6\SDP\project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Customer\GenerateInvoice.cshtml.g.cs
+>>>>>>> 1b2f2c627c97867cb5b7f88578ce1ee8aa731b95
