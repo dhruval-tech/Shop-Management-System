@@ -238,9 +238,6 @@ namespace SDP.Data.Migrations
                     b.Property<string>("email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("productName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("customerId");
 
                     b.ToTable("customers");
