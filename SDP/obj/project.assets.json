@@ -8608,19 +8608,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dhruval\\.nuget\\packages\\": {}
+<<<<<<< HEAD
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\SHREEJI\\.nuget\\packages\\": {}
+>>>>>>> 1b2f2c627c97867cb5b7f88578ce1ee8aa731b95
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dhruval\\github\\Shop-Management-System\\SDP\\SDP.csproj",
+<<<<<<< HEAD
+      "projectUniqueName": "G:\\SDP\\Project\\Shop-Management-System\\SDP\\SDP.csproj",
       "projectName": "SDP",
-      "projectPath": "D:\\Dhruval\\github\\Shop-Management-System\\SDP\\SDP.csproj",
-      "packagesPath": "C:\\Users\\Dhruval\\.nuget\\packages\\",
-      "outputPath": "D:\\Dhruval\\github\\Shop-Management-System\\SDP\\obj\\",
+      "projectPath": "G:\\SDP\\Project\\Shop-Management-System\\SDP\\SDP.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "G:\\SDP\\Project\\Shop-Management-System\\SDP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dhruval\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "D:\\sem 6\\SDP\\Project\\Shop-Management-System\\SDP\\SDP.csproj",
+      "projectName": "SDP",
+      "projectPath": "D:\\sem 6\\SDP\\Project\\Shop-Management-System\\SDP\\SDP.csproj",
+      "packagesPath": "C:\\Users\\SHREEJI\\.nuget\\packages\\",
+      "outputPath": "D:\\sem 6\\SDP\\Project\\Shop-Management-System\\SDP\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\SHREEJI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 1b2f2c627c97867cb5b7f88578ce1ee8aa731b95
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8632,6 +8647,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -8643,6 +8659,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
@@ -8687,7 +8704,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

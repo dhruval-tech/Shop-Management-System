@@ -1,0 +1,60 @@
+﻿@model SDP.ViewModels.PurchaseProductViewModel
+@{
+    ViewData["Title"] = "AddProduct";
+}
+
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/breadcumb3.jpg);">
+    <div class="bradcumbContent">
+        <!--<p>See what’s new</p>-->
+        <h2>Add Product</h2>
+    </div>
+</section>
+
+<section class="login-area section-padding-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="login-content">
+                    <h3>Welcome </h3>
+                    <!-- Login Form -->
+                    <div class="login-form">
+                        <form enctype="multipart/form-data" method="post" asp-action="PurchaseProduct">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+
+                            <p class="text-danger">@ViewBag.ErrorMessage</p>
+                            <p class="text-danger">@ViewBag.quantity</p>
+                            <div class="form-group">
+                                <label asp-for="ProductCategory">Product Category</label>
+                                <input type="text" class="form-control" asp-for="ProductCategory" aria-describedby="namelHelp" placeholder="Enter Category" required>
+                                <span asp-validation-for="ProductCategory" class="text-danger"></span>
+
+                                @*<small id="nameHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>Be specific.</small>*@
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ProductName">Product Name</label>
+                                <input type="text" class="form-control" asp-for="ProductName" placeholder="Product Name" required>
+                                <span asp-validation-for="ProductName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ProductQuantity">Product Quantity</label>
+                                <input type="text" class="form-control" asp-for="ProductQuantity" placeholder="Product Quantity" required>
+                                <span asp-validation-for="ProductQuantity" class="text-danger"></span>
+                            </div>
+
+
+                            <button type="submit" class="btn oneMusic-btn mt-30">Add To Cart</button>
+                            <hr />
+                            @*<button type="button" asp-action="GenerateInvoice" asp-controller="Customer" class="btn oneMusic-btn mt-20">Generate Invoice</button>*@
+
+
+
+
+                        </form>
+                        <a asp-action="GenerateInvoice" asp-controller="Customer">Generate Invoice</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
