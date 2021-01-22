@@ -16,8 +16,10 @@
   padding: 0; }
 
 body {
-  font-family: "Archivo Narrow", sans-serif;
-  font-size: 14px; }
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+}
 
 h1,
 h2,

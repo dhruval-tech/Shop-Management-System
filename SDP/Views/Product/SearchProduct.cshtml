@@ -4,38 +4,92 @@
     ViewData["Title"] = "SearchProduct";
 }
 
-<h1>SearchProduct</h1>
-<div>
-    <h4>product</h4>
-    <hr />
+@*<h1>SearchProduct</h1>
+    <div>
+        <h4>product</h4>
+        <hr />
 
-    <input placeholder="Category" type="text" id="myCategory">
-    <input type="text" id="myProduct" placeholder="Product">
-    <table>
-        <tr>
-            <th>ProductId</th>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Original Price</th>
-            <th>MRP</th>
-            <th>Quantity</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </tr>
-        @foreach (var product in Model)
-        {
-            <tr class="rw">
-                <td>@product.productId</td>
-                <td class="productName">@product.Name</td>
-                <td class="category">@product.Category</td>
-                <td>@product.originalPrice</td>
-                <td>@product.MRP</td>
-                <td>@product.Quantity</td>
-                <td><a asp-action="UpdateProduct" asp-route-id="@product.productId">Edit</a></td>
-                    <td><a asp-action="DeleteProduct" asp-route-id="@product.productId">Delete</a> </td>
+        <input placeholder="Category" type="text" id="myCategory">
+        <input type="text" id="myProduct" placeholder="Product">
+        <table>
+            <tr>
+                <th>ProductId</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Original Price</th>
+                <th>MRP</th>
+                <th>Quantity</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
-        }
-    </table>
+            @foreach (var product in Model)
+            {
+                <tr class="rw">
+                    <td>@product.productId</td>
+                    <td class="productName">@product.Name</td>
+                    <td class="category">@product.Category</td>
+                    <td>@product.originalPrice</td>
+                    <td>@product.MRP</td>
+                    <td>@product.Quantity</td>
+                    <td><a asp-action="UpdateProduct" asp-route-id="@product.productId">Edit</a></td>
+                        <td><a asp-action="DeleteProduct" asp-route-id="@product.productId">Delete</a> </td>
+                </tr>
+            }
+        </table>
 
-</div>
+    </div>*@
+
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/breadcumb3.jpg);">
+    <div class="bradcumbContent">
+        <p>See what’s new</p>
+        <h2>Update Products</h2>
+    </div>
+</section>
+<section class="events-area section-padding-100">
+    <link rel="stylesheet" href="~/css/ViewProducts.css">
+
+   <input style="margin-left:200px;" placeholder="Category" type="text" id="myCategory">
+    Product Name: <input type="text" id="myProduct" placeholder="Product">
+    <div class="container mydiv">
+        <div class="row">
+            @foreach (var product in Model)
+            {
+                var photoPath = "~/img/" + (product.Photopath);
+                <div class="col-md-4">
+                    <!-- bbb_deals -->
+                    <div class="bbb_deals">
+                        <div class="ribbon ribbon-top-right"><span><small class="cross">x </small>4</span></div>
+                        <div class="bbb_deals_title">Today's Combo Offer</div>
+                        <div class="bbb_deals_slider_container">
+                            <div class=" bbb_deals_item">
+                                <div class="bbb_deals_image"><img src="@photoPath " asp-append-version="true"></div>
+                                <div class="bbb_deals_content">
+                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                        <div class="category bbb_deals_item_category"><a href="#">@Html.DisplayFor(x => product.Category)</a></div>
+                                        <div class="bbb_deals_item_price_a ml-auto"><strike>Discount</strike></div>
+                                    </div>
+                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                        <div class="productName bbb_deals_item_name ">@Html.DisplayFor(x => product.Name)</div>
+                                        <div class="bbb_deals_item_price ml-auto">₹@Html.DisplayFor(x => product.MRP)</div>
+                                    </div>
+                                    <div class="available">
+                                        <div class="available_line d-flex flex-row justify-content-start">
+                                            <div class="available_title">Available: <span>@Html.DisplayFor(x => product.Quantity)</span></div>
+                                            <div class="sold_stars ml-auto"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                                        </div>
+                                        <div class="available_bar"><span style="width:17%"></span></div>
+                                    </div>
+                                    <a asp-action="UpdateProduct" asp-route-id="@product.productId">Edit</a>
+                                    <td><a asp-action="DeleteProduct" asp-route-id="@product.productId">Delete</a> </td>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+
 

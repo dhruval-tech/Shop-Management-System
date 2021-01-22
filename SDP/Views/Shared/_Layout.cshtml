@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="icon" href="/img/core-img/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    
+
 </head>
 <body>
 
@@ -44,41 +46,43 @@
 
                                 <ul>
                                     <li><a asp-action="Index" asp-controller="Home">Home</a></li>
-                                    <li><a asp-action="AddProduct" asp-controller="Product">AddProduct</a></li>
-                                    <li>
-                                        <a href="#">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a asp-action="Index" asp-controller="Home">Home</a></li>
-                                            <li><a asp-action="Index">Albums</a></li>
-                                            <li><a href="event.html">Events</a></li>
-                                            <li><a href="blog.html">News</a></li>
-                                            <li><a asp-action="Index">Contact</a></li>
-                                            <li><a asp-action="Index">Elements</a></li>
-                                            <li><a asp-action="Index">Login</a></li>
-                                            <li>
-                                                <a href="#">Dropdown</a>
-                                                <ul class="dropdown">
-                                                    <li><a href="#">Even Dropdown</a></li>
-                                                    <li><a href="#">Even Dropdown</a></li>
-                                                    <li><a href="#">Even Dropdown</a></li>
-                                                    <li>
-                                                        <a href="#">Even Dropdown</a>
-                                                        <ul class="dropdown">
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="#">Even Dropdown</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                    <li><a asp-action="AddProduct" asp-controller="Product">Add Product</a></li>
+                                    <li><a asp-action="SearchProduct" asp-controller="Product">Update Product</a></li>
+                                    
+                                    @*<li>
+            <a href="#">Pages</a>
+            <ul class="dropdown">
+                <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                <li><a asp-action="Index">Albums</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="blog.html">News</a></li>
+                <li><a asp-action="Index">Contact</a></li>
+                <li><a asp-action="Index">Elements</a></li>
+                <li><a asp-action="Index">Login</a></li>
+                <li>
+                    <a href="#">Dropdown</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Even Dropdown</a></li>
+                        <li><a href="#">Even Dropdown</a></li>
+                        <li><a href="#">Even Dropdown</a></li>
+                        <li>
+                            <a href="#">Even Dropdown</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Deeply Dropdown</a></li>
+                                <li><a href="#">Deeply Dropdown</a></li>
+                                <li><a href="#">Deeply Dropdown</a></li>
+                                <li><a href="#">Deeply Dropdown</a></li>
+                                <li><a href="#">Deeply Dropdown</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Even Dropdown</a></li>
+                    </ul>
+                </li>
+            </ul>
 
-                                    </li>
+        </li>*@
                                     @*<li><a asp-action="Events" asp-controller="Home">Events</a></li>
-                                        <li><a asp-action="Events" asp-controller="Home">News</a></li>*@
+        <li><a asp-action="Events" asp-controller="Home">News</a></li>*@
                                     <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
                                 </ul>
                                 <partial name="_LoginPartial" />
@@ -166,6 +170,11 @@
     <script src="/js/active.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/particles.min.js"></script>
+
+    <script src="/js/particle.js"></script>
+
     <script src="~/js/site.js" asp-append-version="true"></script>
     @if (IsSectionDefined("Scripts"))
     {

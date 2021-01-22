@@ -9,7 +9,7 @@ $(document).ready(function () {
         var myArr = [];
         input = $("#myCategory");
         filter = input.val().toUpperCase()
-        li = $(".rw");
+        li = $(".col-md-4");
       //  console.log(input);
         console.log(filter);
         //console.log(li);
@@ -43,7 +43,7 @@ $(document).ready(function () {
         filter = input.val().toUpperCase();
         filter1 = input1.val().toUpperCase();
 
-        li = $(".rw");
+        li = $("col-md-4");
         //console.log(input);
         console.log(filter);
         //console.log(li);
