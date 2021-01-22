@@ -25,7 +25,6 @@ namespace SDP.Controllers
         }
 
         [Authorize]
-        [HttpGet]
         public IActionResult AddProduct()
         {
             return View();
