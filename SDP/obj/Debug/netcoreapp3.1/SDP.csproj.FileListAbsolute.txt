@@ -329,3 +329,8 @@ D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\SearchProduct.cshtml.g.cs
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\UpdateProduct.cshtml.g.cs
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\ViewProducts.cshtml.g.cs
+G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Product\ViewProducts.cshtml.g.cs
+G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Staff\UpdateStaff.cshtml.g.cs
+G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Staff\ViewStaff.cshtml.g.cs
+G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Staff\AddStaff.cshtml.g.cs
+G:\SDP\Project\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Staff\DeleteStaff.cshtml.g.cs
