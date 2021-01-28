@@ -1,0 +1,91 @@
+﻿@page
+@model SDP.Areas.Identity.Pages.Account.loginModel
+@{
+}
+
+<link rel="stylesheet" href="~/css/login/style.css">
+<link rel="stylesheet" href="~/css/login/particle.css">
+
+@*<section class="breadcumb-area bg-img bg-overlay" style="        background-image: url(/img/bg-img/lofts.jpg);">
+        <div class="bradcumbContent">
+            <p>See what’s new</p>
+            <h2>Login</h2>
+        </div>
+    </section>
+
+    <section class="login-area section-padding-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="login-content">
+                        <h3>Welcome Back</h3>
+
+                        <div class="login-form">
+                            <form method="post">
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <div class="form-group">
+                                    <label asp-for="Email">Email address</label>
+                                    <input asp-for="Email" type="email" class="form-control" placeholder="Enter E-mail" required>
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                    <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Password">Password</label>
+                                    <input class="form-control" asp-for="Password" placeholder="Password" required>
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                                <div>
+                                    <a asp-controller="Home" asp-action="ForgotPassword">Forgot Password?</a>
+                                </div>
+                                <button type="submit" class="btn oneMusic-btn mt-30">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+
+<section class="breadcumb-area ">
+    <style>
+        .breadcumb-area {
+            height: 100%;
+        }
+    </style>
+    <div id="particles-js">
+
+        <section class="login-area section-padding-10">
+
+            <div class="demo" style="margin-top:auto;">
+                <div class="login">
+                    <img src="/img/bg-img/comein.jpg" style="margin-top: 0px;margin-left: 0px;width: 300px;  height: 270px;">
+                    <div class="login__form">
+                        <form method="post">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="login__row">
+                                <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
+                                    <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+                                </svg>
+                                <input asp-for="Email" class="login__input name" placeholder="Username" required />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+
+                            </div>
+                            <div class="login__row">
+                                <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
+                                    <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+                                </svg>
+                                <input asp-for="Password" class="login__input pass" placeholder="Password" required />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+
+                            </div>
+                            <button type="submit" class="login__submit">Sign in</button>
+                            <p class="login__signup">Don't have an account? &nbsp;</p>
+                            <a asp-controller="Account" asp-action="Register">Sign up</a>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</section>

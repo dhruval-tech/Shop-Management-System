@@ -4,7 +4,6 @@
     ViewData["Title"] = "SearchProduct";
 }
 
-<<<<<<< HEAD
 @*<h1>SearchProduct</h1>
     <div>
         <h4>product</h4>
@@ -24,51 +23,7 @@
                 <th>Delete</th>
 =======
 <h1>SearchProduct</h1>
-<div>
-    <hr />
-
-    <input placeholder="Category" type="text" id="myCategory">
-    <input type="text" id="myProduct" placeholder="Product">
-    <table>
-        <tr>
-            <th>ProductId</th>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Original Price</th>
-            <th>MRP</th>
-            <th>Quantity</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </tr>
-        @foreach (var product in Model)
-        {
-            <tr class="rw">
-                <td>@product.productId</td>
-                <td class="productName">@product.Name</td>
-                <td class="category">@product.Category</td>
-                <td>@product.originalPrice</td>
-                <td>@product.MRP</td>
-                <td>@product.Quantity</td>
-                <td><a asp-action="UpdateProduct" asp-route-id="@product.productId">Edit</a></td>
-                    <td><a asp-action="DeleteProduct" asp-route-id="@product.productId">Delete</a> </td>
->>>>>>> af02945594981ce2c7506447215829dfe7bba916
-            </tr>
-            @foreach (var product in Model)
-            {
-                <tr class="rw">
-                    <td>@product.productId</td>
-                    <td class="productName">@product.Name</td>
-                    <td class="category">@product.Category</td>
-                    <td>@product.originalPrice</td>
-                    <td>@product.MRP</td>
-                    <td>@product.Quantity</td>
-                    <td><a asp-action="UpdateProduct" asp-route-id="@product.productId">Edit</a></td>
-                        <td><a asp-action="DeleteProduct" asp-route-id="@product.productId">Delete</a> </td>
-                </tr>
-            }
-        </table>
-
-    </div>*@
+*@
 
 <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/breadcumb3.jpg);">
     <div class="bradcumbContent">
@@ -111,7 +66,7 @@
                                         <div class="available_bar"><span style="width:17%"></span></div>
                                     </div>
                                     <a asp-action="UpdateProduct" asp-route-id="@product.productId">Edit</a>
-                                    <td><a asp-action="DeleteProduct" asp-route-id="@product.productId">Delete</a> </td>
+                                    <a asp-action="DeleteProduct" asp-route-id="@product.productId">Delete</a> 
                                 </div>
                             </div>
                         </div>
