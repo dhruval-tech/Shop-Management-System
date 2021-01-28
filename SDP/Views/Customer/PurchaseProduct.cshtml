@@ -1,60 +1,111 @@
-﻿@model SDP.ViewModels.PurchaseProductViewModel
+﻿@model IEnumerable<SDP.Models.product>
 @{
     ViewData["Title"] = "AddProduct";
 }
 
-<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/breadcumb3.jpg);">
-    <div class="bradcumbContent">
-        <!--<p>See what’s new</p>-->
-        <h2>Add Product</h2>
-    </div>
-</section>
+@*<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/breadcumb3.jpg);">
+        <div class="bradcumbContent">
+            <h2>Add Product</h2>
+        </div>
+    </section>
 
-<section class="login-area section-padding-100">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-8">
-                <div class="login-content">
-                    <h3>Welcome </h3>
-                    <!-- Login Form -->
-                    <div class="login-form">
-                        <form enctype="multipart/form-data" method="post" asp-action="PurchaseProduct">
-                            <div asp-validation-summary="All" class="text-danger"></div>
+    <section class="login-area section-padding-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="login-content">
+                        <h3>Welcome </h3>
+                        <div class="login-form">
+                            <form enctype="multipart/form-data" method="post" asp-action="PurchaseProduct">
+                                <div asp-validation-summary="All" class="text-danger"></div>
 
-                            <p class="text-danger">@ViewBag.ErrorMessage</p>
-                            <p class="text-danger">@ViewBag.quantity</p>
-                            <div class="form-group">
-                                <label asp-for="ProductCategory">Product Category</label>
-                                <input type="text" class="form-control" asp-for="ProductCategory" aria-describedby="namelHelp" placeholder="Enter Category" required>
-                                <span asp-validation-for="ProductCategory" class="text-danger"></span>
+                                <p class="text-danger">@ViewBag.ErrorMessage</p>
+                                <p class="text-danger">@ViewBag.quantity</p>
+                                <div class="form-group">
+                                    <label asp-for="ProductCategory">Product Category</label>
+                                    <input type="text" class="form-control" asp-for="ProductCategory" aria-describedby="namelHelp" placeholder="Enter Category" required>
+                                    <span asp-validation-for="ProductCategory" class="text-danger"></span>
 
-                                @*<small id="nameHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>Be specific.</small>*@
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="ProductName">Product Name</label>
-                                <input type="text" class="form-control" asp-for="ProductName" placeholder="Product Name" required>
-                                <span asp-validation-for="ProductName" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="ProductQuantity">Product Quantity</label>
-                                <input type="text" class="form-control" asp-for="ProductQuantity" placeholder="Product Quantity" required>
-                                <span asp-validation-for="ProductQuantity" class="text-danger"></span>
-                            </div>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ProductName">Product Name</label>
+                                    <input type="text" class="form-control" asp-for="ProductName" placeholder="Product Name" required>
+                                    <span asp-validation-for="ProductName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ProductQuantity">Product Quantity</label>
+                                    <input type="text" class="form-control" asp-for="ProductQuantity" placeholder="Product Quantity" required>
+                                    <span asp-validation-for="ProductQuantity" class="text-danger"></span>
+                                </div>
 
 
-                            <button type="submit" class="btn oneMusic-btn mt-30">Add To Cart</button>
-                            <hr />
-                            @*<button type="button" asp-action="GenerateInvoice" asp-controller="Customer" class="btn oneMusic-btn mt-20">Generate Invoice</button>*@
+                                <button type="submit" class="btn oneMusic-btn mt-30">Add To Cart</button>
+                                <hr />
 
 
 
 
-                        </form>
-                        <a asp-action="GenerateInvoice" asp-controller="Customer">Generate Invoice</a>
+                            </form>
+                            <a asp-action="GenerateInvoice" asp-controller="Customer">Generate Invoice</a>
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>*@
+    
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/breadcumb3.jpg);">
+    <div class="bradcumbContent">
+        <p>See what’s new</p>
+        <h2>Products</h2>
     </div>
+</section>
+<section class="events-area section-padding-100">
+    <link rel="stylesheet" href="~/css/ViewProducts.css">
+    <div class="container mydiv">
+        <div class="row">
+            @foreach (var arr in Model)
+            {
+                if (arr.Quantity != 0)
+                {
+
+                    var photoPath = "~/img/" + (arr.Photopath);
+                    <div class="col-md-4">
+                        <!-- bbb_deals -->
+                        <div class="bbb_deals">
+                            <div class="ribbon ribbon-top-right"><span><small class="cross">x </small>4</span></div>
+                            <div class="bbb_deals_title">Today's Combo Offer</div>
+                            <div class="bbb_deals_slider_container">
+                                <div class=" bbb_deals_item">
+                                    <div class="bbb_deals_image"><img src="@photoPath " asp-append-version="true"></div>
+                                    <div class="bbb_deals_content">
+                                        <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                            <div class="bbb_deals_item_category"><a href="#">@Html.DisplayFor(x => arr.Category)</a></div>
+                                            <div class="bbb_deals_item_price_a ml-auto"><strike>Discount</strike></div>
+                                        </div>
+                                        <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                            <div class="bbb_deals_item_name">@Html.DisplayFor(x => arr.Name)</div>
+                                            <div class="bbb_deals_item_price ml-auto">₹@Html.DisplayFor(x => arr.MRP)</div>
+                                        </div>
+                                        <div class="available">
+                                            <div class="available_line d-flex flex-row justify-content-start">
+                                                <div class="available_title">Available: <span>@Html.DisplayFor(x => arr.Quantity)</span></div>
+                                                <div class="sold_stars ml-auto"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                                            </div>
+                                            <div class="available_bar"><span style="width:17%"></span></div>
+                                        </div>
+                                        <a asp-action="AddToCart" asp-route-id="@arr.productId" style="margin-top: 10px; width: 300px;background-color: burlywood;">Add to Cart</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <a style="margin-left:600px;" asp-action="GenerateInvoice" asp-controller="Customer">Generate Invoice</a>
+
 </section>

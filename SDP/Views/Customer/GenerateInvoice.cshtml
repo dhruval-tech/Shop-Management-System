@@ -1,7 +1,128 @@
-﻿
+﻿@model IEnumerable<SDP.Models.Order>
 @{
     ViewData["Title"] = "GenerateInvoice";
+    DateTime dateTime = new DateTime();
 }
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="~/css/invoice.css">
+@*<div>
+    <hr />
 
-<h1>GenerateInvoice</h1>
 
+    <table>
+
+
+        @foreach (var order in Model)
+        {
+            if (order.customerId == ViewBag.customer_Id)
+            {
+                <tr class="rw">
+                    <td>@order.customerId</td>
+                    <td class="productName">@order.ProductName</td>
+                    <td class="category">@order.Quantity</td>
+                    <td>@order.Price</td>
+                    <td>@ViewBag.total_quantity</td>
+                    <td>
+                        @ViewBag.total_amount 
+                        @DateTime.Now.ToString("M/d/yyyy");
+                                    </td>
+
+                </tr>
+            }
+
+        }
+    </table>
+
+</div>*@
+<div class="container bootstrap snippets bootdeys  events-area section-padding-100" ">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default invoice" id="invoice">
+                <div class="panel-body">
+                    <div class="invoice-ribbon"><div class="ribbon-inner">PAID</div></div>
+                    <div class="row">
+
+                        <div class="col-sm-6 top-left">
+                            <i class="fa fa-rocket"></i>
+                        </div>
+
+                        <div class="col-sm-6 top-right">
+                            <h3 class="marginright">INVOICE</h3>
+                            <span class="marginright">@DateTime.Now.ToString("dd/mm/yyyy");</span>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="row">
+
+                        <div class="col-xs-4 from">
+                            <p class="lead marginbottom">From : One Sound</p>
+                            
+                        </div>
+
+                        <div class="col-xs-4 to">
+                            <p class="lead marginbottom">To : @ViewBag.customer_name </p>
+                            
+
+                        </div>
+
+                        <div class="col-xs-4 text-right payment-details">
+                            <p class="lead marginbottom payment-info">Payment details</p>
+                            <p>Date: @DateTime.Now.ToString("dd/mm/yyyy");</p>
+                            <p>VAT: DK888-777 </p>
+                            <p>Total Amount: @ViewBag.total_amount  </p>
+                            <p>Account Name: @ViewBag.customer_name </p>
+                        </div>
+
+                    </div>
+
+                    <div class="row table-row">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" style="width:5%">#</th>
+                                    <th style="width:50%">Item</th>
+                                    <th class="text-right" style="width:15%">Quantity</th>
+                                    @*<th class="text-right" style="width:15%">Unit Price</th>*@
+                                    <th class="text-right" style="width:15%">Total Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{ var count = 0; }
+                                @foreach (var order in Model)
+                                {
+                                    if (order.customerId == ViewBag.customer_Id)
+                                    {
+                                        count = count + 1;
+                                        <tr>
+                                            <td class="text-center">@count</td>
+                                            <td>@order.ProductName</td>
+                                            <td class="text-right">@order.Quantity</td>
+                                            <td class="text-right">@order.Price</td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6 margintop">
+                            <p class="lead marginbottom">THANK YOU!</p>
+
+                            <button class="btn btn-success" id="invoice-print"><i class="fa fa-print"></i> Print Invoice</button>
+                            <button class="btn btn-danger"><i class="fa fa-envelope-o"></i> Mail Invoice</button>
+                        </div>
+                        <div class="col-xs-6 text-right pull-right invoice-total">
+                            <p style=" margin-left: 800px; ">Subtotal : @ViewBag.total_amount INR</p>
+                            <p style=" margin-left: 800px; ">Discount : Not available </p>
+                           
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

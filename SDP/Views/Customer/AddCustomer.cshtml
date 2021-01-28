@@ -33,7 +33,7 @@
                             </div>
                             <div class="form-group">
                                 <label asp-for="contact">Contact Number</label>
-                                <input type="number" class="form-control" asp-for="contact" pattern=".{10}" placeholder="Contact Number" required>
+                                <input type="number" pattern="[0-9]{11}" class="form-control" asp-for="contact" placeholder="Contact Number" required>
                                 <span asp-validation-for="contact" class="text-danger"></span>
                             </div>
                             <div class="form-group">

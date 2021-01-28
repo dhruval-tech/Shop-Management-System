@@ -171,3 +171,6 @@ D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\staticwebas
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\SDP.dll
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\SDP.pdb
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\SDP.genruntimeconfig.cache
+D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\login.cshtml.g.cs
+D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\register.cshtml.g.cs
+D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\SDP.csprojAssemblyReference.cache

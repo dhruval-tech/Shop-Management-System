@@ -13,9 +13,13 @@ namespace SDP.Data
             : base(options)
         {
         }
+
         public DbSet<product> products { get; set; }
+        //public DbSet<ProductViewModel> productsViewModel { get; set; }
         public DbSet<customer> customers { get; set; }
         public DbSet<staff> staffs { get; set; }
+        public DbSet<Order> order { get; set; }
+
 
     }
 }
