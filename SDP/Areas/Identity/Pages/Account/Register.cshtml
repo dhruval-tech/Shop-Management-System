@@ -1,0 +1,52 @@
+﻿@page
+@model SDP.Areas.Identity.Pages.Account.RegisterModel
+@{
+}
+<section class="breadcumb-area bg-img bg-overlay" style="        background-image: url(/img/bg-img/lofts.jpg);">
+    <div class="bradcumbContent">
+        <p>See what’s new</p>
+        <h2>Register</h2>
+    </div>
+</section>
+<!-- ##### Breadcumb Area End ##### -->
+<!-- ##### Login Area Start ##### -->
+<section class="login-area section-padding-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="login-content">
+                    <h3>Welcome </h3>
+                    <!-- Login Form -->
+                    <div class="login-form">
+                        <form method="post">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Email">Email address</label>
+                                <input type="email" class="form-control" asp-for="Email" aria-describedby="emailHelp" placeholder="Enter E-mail" required>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                                <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password">Password</label>
+                                <input type="password" class="form-control" asp-for="Password" placeholder="Password" required>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ConfirmPassword">Confirm Password</label>
+                                <input type="password" class="form-control" asp-for="ConfirmPassword" placeholder="Confirm Password" required>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            @*<div class="form-group">
+                                    <input type="radio" asp-for="Role" name="role" value="Admin">
+                                    <label asp-for="Role">Admin</label><br>
+                                    <input type="radio" asp-for="Role" name="role" value="Customer">
+                                    <label asp-for="Role">Customer</label><br>
+                                </div>*@
+                            <button type="submit" class="btn oneMusic-btn mt-30">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

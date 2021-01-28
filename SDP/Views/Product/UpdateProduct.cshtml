@@ -1,5 +1,5 @@
 ﻿@model SDP.Models.product
-@{
+@{ 
     ViewData["Title"] = "UpdateProduct";
 }
 
@@ -19,36 +19,44 @@
                     <h3>Welcome </h3>
                     <!-- Login Form -->
                     <div class="login-form">
-                            <form asp-action="UpdateProduct">
-                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                                <input type="hidden" asp-for="productId" />
-                                <div class="form-group">
-                                    <label asp-for="Name" class="control-label"></label>
-                                    <input asp-for="Name" class="form-control" />
-                                    <span asp-validation-for="Name" class="text-danger"></span>
+                        <form enctype="multipart/form-data" asp-action="UpdateProduct">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="productId" />
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label"></label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Category" class="control-label"></label>
+                                <input asp-for="Category" class="form-control" />
+                                <span asp-validation-for="Category" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="originalPrice" class="control-label"></label>
+                                <input asp-for="originalPrice" class="form-control" />
+                                <span asp-validation-for="originalPrice" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MRP" class="control-label"></label>
+                                <input asp-for="MRP" class="form-control" />
+                                <span asp-validation-for="MRP" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Quantity" class="control-label"></label>
+                                <input asp-for="Quantity" class="form-control" />
+                                <span asp-validation-for="Quantity" class="text-danger"></span>
+                            </div>
+                            @*<div class="form-group">
+                                <label asp-for="Photopath"></label>
+                                <div class="custom-file">
+                                    <input asp-for="Photopath" class="form-control custom-file-input">
+                                    <img src="~/img/" + Photopath); alt="Alternate Text" />
+                                    <label asp-for="Photopath" class="custom-file-label">Choose File</label>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="Category" class="control-label"></label>
-                                    <input asp-for="Category" class="form-control" />
-                                    <span asp-validation-for="Category" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="originalPrice" class="control-label"></label>
-                                    <input asp-for="originalPrice" class="form-control" />
-                                    <span asp-validation-for="originalPrice" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="MRP" class="control-label"></label>
-                                    <input asp-for="MRP" class="form-control" />
-                                    <span asp-validation-for="MRP" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="Quantity" class="control-label"></label>
-                                    <input asp-for="Quantity" class="form-control" />
-                                    <span asp-validation-for="Quantity" class="text-danger"></span>
-                                </div>
-                                <button type="submit" class="btn oneMusic-btn mt-30">Update Product</button>
-                            </form>
+                            </div>*@
+                            <button type="submit" class="btn oneMusic-btn mt-30">Update Product</button>
+                        </form>
                             <div>
                                 <a asp-action="Index">Back to List</a>
                             </div>

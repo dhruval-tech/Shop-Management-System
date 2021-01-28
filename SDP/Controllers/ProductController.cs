@@ -60,11 +60,12 @@ namespace SDP.Controllers
            
             return View();
         }
+        static string photoPath = "";
         [HttpGet]
         public async Task<IActionResult>  UpdateProduct(int ?id)
         {
             product pd = await _context.products.FindAsync(id);
-
+            photoPath = ""+pd.Photopath;
             if (pd == null)
             {
                 return NotFound();
@@ -81,6 +82,18 @@ namespace SDP.Controllers
             {
                 try
                 {
+                    pd.Photopath = photoPath;
+                    Console.WriteLine(photoPath);
+                    //product newProduct = new product
+                    //{
+
+                    //    Name = pd.Name,
+                    //    Category = pd.Category,
+                    //    originalPrice = pd.originalPrice,
+                    //    MRP = pd.MRP,
+                    //    Quantity = pd.Quantity,
+                    //    Photopath = photoPath
+                    //};
                     _context.Update(pd);
                     await _context.SaveChangesAsync();
                 }

@@ -10,7 +10,7 @@ namespace SDP.Models
         public int customerId { get; set; }
         public string Name { get; set; }
         public string email { get; set; }
-        public int contact { get; set; }
+        public long contact { get; set; }
         public string address { get; set; }
 
        //public string productName { get; set; }
