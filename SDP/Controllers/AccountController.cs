@@ -39,6 +39,7 @@ namespace SDP.Controllers
                 {
                     await signInManager.SignInAsync(user, isPersistent: false);
                     return RedirectToAction("index", "home");
+                    //return RedirectToAction("index1", "home");
                 }
 
                 foreach (var error in result.Errors)
@@ -70,7 +71,7 @@ namespace SDP.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("index", "home");
+                    return RedirectToAction("Customer_Home", "home");
                 }
 
 

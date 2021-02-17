@@ -23,6 +23,11 @@ namespace SDP.Controllers
             return View();
         }
 
+        public IActionResult Customer_Home()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
