@@ -41,6 +41,82 @@
         </div>
     </div>
 </section>
+<div id="accordion">
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+                    Product
+                </button>
+            </h5>
+        </div>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-lg-3 col-sm-6 space" style="width: 65%;text-align: center;justify-content: center;margin: 20px auto;">
+
+                        <img class="card-img-top rounded mb-3" src="customer.jfif" alt="Card image cap">
+                        <h5 class="card-title ">Add Product</h5>
+                        <a asp-action="AddProduct" asp-controller="Product" class="btn btn-primary"><b>Add Product</b></a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 space" style="width: 65%;text-align: center;justify-content: center;margin: 20px auto;">
+
+                        <img class="card-img-top rounded mb-3" src="customer.jfif" alt="Card image cap">
+                        <h5 class="card-title">Update Product</h5>
+                        <a asp-action="SearchProduct" asp-controller="Product" class="btn btn-primary"><b>Update Product</b></a>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Customer
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <div class="row text-center">
+                    
+                    <div class="col-lg-3 col-sm-6 space" style="width: 65%;text-align: center;justify-content: center;margin: 20px auto;">
+
+                        <img class="card-img-top rounded mb-3" src="customer.jfif" alt="Card image cap">
+                        <h5 class="card-title">Add Customer</h5>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <a asp-action="AddCustomer" asp-controller="Customer" class="btn btn-primary"><b>Add Customer</b></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed " data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Staff
+                </button>
+            </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-lg-3 col-sm-6 space" style="width: 65%;text-align: center;justify-content: center;margin: 20px auto;">
+
+                        <img class="card-img-top rounded mb-3" src="customer.jfif" alt="Card image cap">
+                        <h5 class="card-title ">Add Staff</h5>
+                        <a asp-action="AddStaff" asp-controller="Staff" class="btn btn-primary"><b>Add Staff</b></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- ========== Milestones ========== -->
 <!-- ##### Contact Area Start ##### -->

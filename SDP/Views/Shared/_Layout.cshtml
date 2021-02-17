@@ -1,8 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    @*<meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />*@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,72 +16,28 @@
 <body>
 
     <header class="header-area">
-        <!-- Navbar Area -->
         <div class="oneMusic-main-menu">
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
-                    <!-- Menu -->
-                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+=                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
 
-                        <!-- Nav brand -->
                         <a href="index.html" class="nav-brand"><img src="/img/core-img/logo.png" alt=""></a>
 
-                        <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
                             <span class="navbarToggler"><span></span><span></span><span></span></span>
                         </div>
 
-                        <!-- Menu -->
                         <div class="classy-menu">
 
-                            <!-- Close Button -->
                             <div class="classycloseIcon">
                                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                             </div>
 
-                            <!-- Nav Start -->
                             <div class="classynav">
 
                                 <ul>
                                     <li><a asp-action="Index" asp-controller="Home">Home</a></li>
-                                    <li><a asp-action="AddProduct" asp-controller="Product">Add Product</a></li>
-                                    <li><a asp-action="SearchProduct" asp-controller="Product">Update Product</a></li>
                                     
-                                    @*<li>
-            <a href="#">Pages</a>
-            <ul class="dropdown">
-                <li><a asp-action="Index" asp-controller="Home">Home</a></li>
-                <li><a asp-action="Index">Albums</a></li>
-                <li><a href="event.html">Events</a></li>
-                <li><a href="blog.html">News</a></li>
-                <li><a asp-action="Index">Contact</a></li>
-                <li><a asp-action="Index">Elements</a></li>
-                <li><a asp-action="Index">Login</a></li>
-                <li>
-                    <a href="#">Dropdown</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Even Dropdown</a></li>
-                        <li><a href="#">Even Dropdown</a></li>
-                        <li><a href="#">Even Dropdown</a></li>
-                        <li>
-                            <a href="#">Even Dropdown</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Deeply Dropdown</a></li>
-                                <li><a href="#">Deeply Dropdown</a></li>
-                                <li><a href="#">Deeply Dropdown</a></li>
-                                <li><a href="#">Deeply Dropdown</a></li>
-                                <li><a href="#">Deeply Dropdown</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Even Dropdown</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-        </li>*@
-                                    @*<li><a asp-action="AddProduct" asp-controller="Product">AddProduct</a></li>*@
-                                    <li><a asp-action="AddStaff" asp-controller="Staff">AddStaff</a></li>
-                                    <li><a asp-action="AddCustomer" asp-controller="Customer">AddCustomer</a></li>
                                     <li>
                                         <a href="#">Pages</a>
                                         <ul class="dropdown">
@@ -116,16 +70,10 @@
                                         </ul>
 
                                     </li>
-                                    @*<li><a asp-action="Events" asp-controller="Home">Events</a></li>
-        <li><a asp-action="Events" asp-controller="Home">News</a></li>*@
                                     <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
                                 </ul>
                                 <partial name="_LoginPartial" />
-
-                                <!-- Login/Register -->
-
                             </div>
-                            <!-- Nav End -->
 
                         </div>
                     </nav>
@@ -133,37 +81,11 @@
             </div>
         </div>
     </header>
-    @*<header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                <div class="container">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">gaana</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                        <partial name="_LoginPartial" />
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>*@
+   
+
 
     @RenderBody()
 
-
-    @*<footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; 2020 - gaana - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </div>
-        </footer>*@
     <footer class="footer-area">
         <div class="container">
             <div class="row d-flex flex-wrap align-items-center">
@@ -171,10 +93,8 @@
                     <a href="#"><img src="/img/core-img/logo.png" alt=""></a>
                     <p class="copywrite-text">
                         <a href="#"></a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright &copy;
                         <script>document.write(new Date().getFullYear());</script> All rights reserved | Dhruval Gandhi <i class="fa fa-heart-o" aria-hidden="true"></i>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>
 
@@ -182,8 +102,7 @@
                     <div class="footer-nav">
                         <ul>
                             <li><a href="#">Home</a></li>
-                            @*<li><a href="#">Albums</a></li>
-                                <li><a href="#">Events</a></li>*@
+                            
                             <li><a href="#">News</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul>
@@ -194,14 +113,9 @@
     </footer>
 
     <script src="/js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
     <script src="/js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
     <script src="/js/bootstrap/bootstrap.min.js"></script>
-
-    <!-- All Plugins js -->
     <script src="/js/plugins/plugins.js"></script>
-    <!-- Active js -->
     <script src="/js/active.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
