@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using SDP.Data;
@@ -133,6 +134,8 @@ namespace SDP.Controllers
         
         public IActionResult ViewProducts()
         {
+            ViewBag.Email = null;
+            ViewBag.Email = (HttpContext.Session.GetString("Email"));
             var productsList = _context.products.ToList();
             return View(productsList);
         }

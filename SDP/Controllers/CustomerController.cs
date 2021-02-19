@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using System.Collections;
 using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.Http;
+using System.Data;
 
 namespace SDP.Controllers
 {
@@ -33,14 +35,18 @@ namespace SDP.Controllers
             this.hostingEnvironment = hostingEnvironment;
             //cartList.Add(0);
         }
-
-
+        
         public IActionResult Index()
         {
+            ViewBag.Email = null;
+            //Console.WriteLine(HttpContext.Session.GetString("Email"));
+            ViewBag.Email = (HttpContext.Session.GetString("Email"));
+            
+
             return View();
         }
 
-
+        
 
         [Authorize]
 
@@ -247,5 +253,41 @@ namespace SDP.Controllers
                 return RedirectToAction("AddCustomer","Customer");
             }
         }
+        public async Task<IActionResult> Profile()
+        {
+            ViewBag.Email = null;
+            ViewBag.Email = (HttpContext.Session.GetString("Email"));
+            SqlConnection cnn;
+            String connectionString = "Server=(localdb)\\mssqllocaldb;Database=aspnet-SDP-CC54433E-7C52-476B-9D44-F833439FB6B2;Trusted_Connection=True;MultipleActiveResultSets=true";
+            cnn = new SqlConnection(connectionString);
+            cnn.Open();
+            String query = "SELECT customerId FROM customers WHERE email = '" + ViewBag.Email + "' ";
+            Console.WriteLine(query);
+            SqlCommand command = new SqlCommand(query, cnn);
+            SqlDataReader reader = command.ExecuteReader();
+            int customerId = 0;
+            while (reader.Read()) {
+                customerId = Int32.Parse((reader.GetValue(0)).ToString());
+            }
+            //customer pd = await _context.customers.FindAsync(customerId);
+            //cnn.Close();
+            //connectionString = "Server=(localdb)\\mssqllocaldb;Database=aspnet-SDP-CC54433E-7C52-476B-9D44-F833439FB6B2;Trusted_Connection=True;MultipleActiveResultSets=true";
+            //cnn = new SqlConnection(connectionString);
+            //cnn.Open();
+            //query = "SELECT OrderId FROM Order WHERE customerId = '" + customerId + "' ";
+            //Console.WriteLine(query);
+            //command = new SqlCommand(query, cnn);
+            //reader = command.ExecuteReader();
+            //int orderId = 0;
+            //while (reader.Read())
+            //{
+            //    orderId = Int32.Parse((reader.GetValue(0)).ToString());
+            //}
+            //Order od = await _context.order.FindAsync(orderId);
+            var orderList = _context.order.ToList();
+            ViewBag.customerId = customerId;
+            return View(orderList);
+        }
+
     }
 }
