@@ -6,47 +6,6 @@
 
 <link rel="stylesheet" href="~/css/login/style.css">
 <link rel="stylesheet" href="~/css/login/particle.css">
-
-@*<section class="breadcumb-area bg-img bg-overlay" style="        background-image: url(/img/bg-img/lofts.jpg);">
-        <div class="bradcumbContent">
-            <p>See what’s new</p>
-            <h2>Login</h2>
-        </div>
-    </section>
-
-    <section class="login-area section-padding-100">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-8">
-                    <div class="login-content">
-                        <h3>Welcome Back</h3>
-
-                        <div class="login-form">
-                            <form method="post">
-                                <div asp-validation-summary="All" class="text-danger"></div>
-                                <div class="form-group">
-                                    <label asp-for="Email">Email address</label>
-                                    <input asp-for="Email" type="email" class="form-control" placeholder="Enter E-mail" required>
-                                    <span asp-validation-for="Email" class="text-danger"></span>
-                                    <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>We'll never share your email with anyone else.</small>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="Password">Password</label>
-                                    <input class="form-control" asp-for="Password" placeholder="Password" required>
-                                    <span asp-validation-for="Password" class="text-danger"></span>
-                                </div>
-                                <div>
-                                    <a asp-controller="Home" asp-action="ForgotPassword">Forgot Password?</a>
-                                </div>
-                                <button type="submit" class="btn oneMusic-btn mt-30">Login</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>*@
-
 <section class="breadcumb-area ">
     <style>
         .breadcumb-area {
@@ -79,6 +38,16 @@
                                 <span asp-validation-for="Password" class="text-danger"></span>
 
                             </div>
+                            <div class="login__row">
+                                <input asp-for="Role" type="radio" name="Role" value="Customer" style="margin-left: -10px;">
+                                <label for="male" style="font-size:large ; margin-left:0px; "><font color="white">Customer</font></label>
+                                <input asp-for="Role" type="radio" name="Role" value="Admin" style="margin-left: 10px;">
+                                <label for="Admin" style="font-size:large ; margin-left:0px; "><font color="white">Admin</font></label>
+                                <span asp-validation-for="Role" class="text-danger"></span>
+
+
+                            </div>
+
                             <button type="submit" class="login__submit">Sign in</button>
                             <p class="login__signup">Don't have an account? &nbsp;</p>
                             <a asp-controller="Account" asp-action="Register">Sign up</a>
@@ -90,3 +59,13 @@
         </section>
     </div>
 </section>
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+    </script>
+
+}  

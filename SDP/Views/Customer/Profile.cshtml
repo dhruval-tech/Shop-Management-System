@@ -1,14 +1,9 @@
-﻿@model IEnumerable<SDP.Models.product>
+﻿@model IEnumerable<SDP.Models.Order>
 @{
-    ViewData["Title"] = "ViewProducts";
     Layout = null;
 }
-@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style=" background-color: black;">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -61,17 +56,7 @@
 
                                     </li>
                                     <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
-                                    @if (SignInManager.IsSignedIn(User))
-                                    {
-                                        <li>
-                                            <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello Admin</a>
-                                        </li>
-                                        <li>
-                                            <form class="form-inline" asp-action="Logout" asp-controller="Account" method="post">
-                                                <button type="submit" class="nav-link btn btn-link text-white">Logout</button>
-                                            </form>
-                                        </li>
-                                    }
+
                                     @if (ViewBag.Email != null)
                                     {
                                         <li><a asp-action="Profile" asp-controller="Customer">@ViewBag.Email</a></li>
@@ -81,7 +66,7 @@
                                             </form>
                                         </li>
                                     }
-                                    @if (!(SignInManager.IsSignedIn(User)) && ViewBag.Email == null)
+                                    @if (ViewBag.Email == null)
                                     {
                                         <li><a asp-action="login" asp-controller="account">Login</a></li>
                                     }
@@ -95,52 +80,70 @@
             </div>
         </div>
     </header>
-    <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/breadcumb3.jpg);">
-        <div class="bradcumbContent">
-            <p>See what’s new</p>
-            <h2>Products</h2>
-        </div>
-    </section>
-    <section class="events-area section-padding-100">
-        <link rel="stylesheet" href="~/css/ViewProducts.css">
-        <div class="container mydiv">
-            <div class="row">
-                @foreach (var arr in Model)
-                {
-                    var photoPath = "~/img/" + (arr.Photopath);
-                    <div class="col-md-4">
-                        <!-- bbb_deals -->
-                        <div class="bbb_deals">
-                            <div class="ribbon ribbon-top-right"><span><small class="cross">x </small>4</span></div>
-                            <div class="bbb_deals_title">Today's Combo Offer</div>
-                            <div class="bbb_deals_slider_container">
-                                <div class=" bbb_deals_item">
-                                    <div class="bbb_deals_image"><img src="@photoPath " asp-append-version="true"></div>
-                                    <div class="bbb_deals_content">
-                                        <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                            <div class="bbb_deals_item_category"><a href="#">@Html.DisplayFor(x => arr.Category)</a></div>
-                                            <div class="bbb_deals_item_price_a ml-auto"><strike>Discount</strike></div>
-                                        </div>
-                                        <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                            <div class="bbb_deals_item_name">@Html.DisplayFor(x => arr.Name)</div>
-                                            <div class="bbb_deals_item_price ml-auto">₹@Html.DisplayFor(x => arr.MRP)</div>
-                                        </div>
-                                        <div class="available">
-                                            <div class="available_line d-flex flex-row justify-content-start">
-                                                <div class="available_title">Available: <span>@Html.DisplayFor(x => arr.Quantity)</span></div>
-                                                <div class="sold_stars ml-auto"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
-                                            </div>
-                                            <div class="available_bar"><span style="width:17%"></span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <div class="container bootstrap snippets bootdeys  events-area section-padding-100" style="margin-top:135px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default invoice" id="invoice">
+                    <div class="panel-body" id="invoice">
+                        <div class="invoice-ribbon">
+                            <div class="ribbon-inner">PAID</div>
                         </div>
+                        
+                        <div class="row">
+
+                            <div class="col-sm-6 top-left">
+                                <i class="fa fa-rocket"></i>
+                            </div>
+
+                            <div class="col-sm-6 top-right">
+                                <h3 class="marginright">Profile</h3>
+                            </div>
+
+                        </div>
+                        <hr>
+                        
+
+                        <div class="row table-row">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" style="width:5%">#</th>
+                                        <th style="width:50%">Item</th>
+                                        <th class="text-right" style="width:15%">Quantity</th>
+                                        @*<th class="text-right" style="width:15%">Unit Price</th>*@
+                                        <th class="text-right" style="width:15%">Total Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{ var count = 0; }
+                                    @foreach (var order in Model)
+                                    {
+                                        if (order.customerId == ViewBag.customerId)
+                                        {
+                                            count = count + 1;
+                                            <tr>
+                                                <td class="text-center">@count</td>
+                                                <td>@order.ProductName</td>
+                                                <td class="text-right">@order.Quantity</td>
+                                                <td class="text-right">@order.Price</td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        
+
                     </div>
-                }
+                    
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+
+
     <footer class="footer-area">
         <div class="container">
             <div class="row d-flex flex-wrap align-items-center">
