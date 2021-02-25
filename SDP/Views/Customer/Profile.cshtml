@@ -88,7 +88,7 @@
                         <div class="invoice-ribbon">
                             <div class="ribbon-inner">PAID</div>
                         </div>
-                        
+
                         <div class="row">
 
                             <div class="col-sm-6 top-left">
@@ -101,7 +101,7 @@
 
                         </div>
                         <hr>
-                        
+
 
                         <div class="row table-row">
                             <table class="table table-striped">
@@ -133,17 +133,39 @@
                             </table>
 
                         </div>
+                        <div>
+                            <div class="col-xs-6 margintop">
 
-                        
+                                <button class="btn btn-success" id="download"><i class="fa fa-print"></i> Print Invoice</button>
+                            </div>
+                        </div>
+
 
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
 
-
+    <script>
+        window.onload = function () {
+            document.getElementById("download")
+                .addEventListener("click", () => {
+                    const invoice = this.document.getElementById("invoice");
+                    console.log(invoice);
+                    console.log(window);
+                    var opt = {
+                        margin: 1,
+                        filename: 'myfile.pdf',
+                        image: { type: 'jpeg', quality: 0.98 },
+                        html2canvas: { scale: 2 },
+                        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                    };
+                    html2pdf().from(invoice).set(opt).save();
+                })
+        }
+    </script>
     <footer class="footer-area">
         <div class="container">
             <div class="row d-flex flex-wrap align-items-center">
