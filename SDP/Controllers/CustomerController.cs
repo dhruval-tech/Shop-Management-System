@@ -13,6 +13,9 @@ using System.Collections;
 using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Http;
 using System.Data;
+using System.Net.Mail;
+using System.Net;
+using System.Text;
 
 namespace SDP.Controllers
 {
@@ -287,6 +290,75 @@ namespace SDP.Controllers
             var orderList = _context.order.ToList();
             ViewBag.customerId = customerId;
             return View(orderList);
+        }
+        string email;
+        public ActionResult MailInvoice() {
+            email = (HttpContext.Session.GetString("Email"));
+            int length = 15;
+            string validChars = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*?_-";
+            Random random = new Random();
+
+            // Select one random character at a time from the string  
+            // and create an array of chars  
+            char[] chars = new char[length];
+            for (int i = 0; i < length; i++)
+            {
+                chars[i] = validChars[random.Next(0, validChars.Length)];
+            }
+            String pwd = new string(chars);
+            //Console.WriteLine(email);
+            //var senderEmail = new MailAddress("dhruval.gaana@gmail.com", "Dhruval");
+            //var receiverEmail = new MailAddress(email, "Receiver");
+            //var password = "Dhruv@l123";
+            //var subject = "Congratulations!, Purchase is Successfull";
+            //var body = "Your UserId is:"+ViewBag.Email+"\nYour password is" + pwd+"\nYou can now login with given credentials :)";
+            //var smtp = new SmtpClient
+            //{
+            //    Host = "smtp.gmail.com",
+            //    Port = 587,
+            //    EnableSsl = true,
+            //    DeliveryMethod = SmtpDeliveryMethod.Network,
+            //    UseDefaultCredentials = false,
+            //    Credentials = new NetworkCredential(senderEmail.Address, password)
+            //};
+            //using (var mess = new MailMessage(senderEmail, receiverEmail)
+            //{
+            //    Subject = subject,
+            //    Body = body
+            //})
+            //{
+            //    smtp.Send(mess);
+            //}
+            string to = "dhruvalgandhi2000@gmail.com"; //To address    
+            string from = "dhruval.gaana@gmail.com"; //From address    
+            MailMessage message = new MailMessage(from, to);
+
+            string mailbody = "Your UserId is:" + ViewBag.Email + "\nYour password is" + pwd + "\nYou can now login with given credentials :)";
+            message.Subject = "Congratulations!, Purchase is Successfull";
+            message.Body = mailbody;
+            message.BodyEncoding = Encoding.UTF8;
+            message.IsBodyHtml = true;
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Gmail smtp    
+            System.Net.NetworkCredential basicCredential1 = new
+            System.Net.NetworkCredential("dhruval.gaana@gmail.com", "Dhruv@l123");
+            client.EnableSsl = true;
+            client.UseDefaultCredentials = false;
+            client.Credentials = basicCredential1;
+            try
+            {
+                client.Send(message);
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return RedirectToAction("index", "home");
+
+
+
+
+            
         }
 
     }
