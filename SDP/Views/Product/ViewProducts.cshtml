@@ -19,10 +19,29 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="icon" href="/img/core-img/favicon.ico">
     <link rel="stylesheet" href="~/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="/js/push.min.js"></script>
+    <script src="/js/serviceWorker.min.js"></script>
+    <script>
+        function start() {
+            @*if (@ViewBag.ProductName != null) {*@
 
+                Push.create("Shop Store", {
+                    body: "@ViewBag.ProductName is available now!!!",
+                    icon: 'https://i.pinimg.com/originals/4b/a7/d8/4ba7d8d3c62e961494a50de2f61b2cc8.jpg',
+                    timeout: 4000,
+                    onClick: function () {
+                        window.focus();
+                        this.close();
+                    }
+                });
+
+            
+        }
+    </script>
 
 </head>
-<body>
+<body onload="start()">
 
     <header class="header-area">
         <div class="oneMusic-main-menu">
@@ -47,7 +66,7 @@
                                 <ul>
                                     <li><a asp-action="Index" asp-controller="Home">Home</a></li>
 
-                                    <li>
+                                    @*<li>
                                         <a href="#">Pages</a>
                                         <ul class="dropdown">
                                             <li><a asp-action="Index" asp-controller="Home">Home</a></li>
@@ -59,8 +78,8 @@
 
                                         </ul>
 
-                                    </li>
-                                    <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
+                                    </li>*@
+                                    <li><a asp-action="Contact" asp-controller="Customer">Contact</a></li>
                                     @if (SignInManager.IsSignedIn(User))
                                     {
                                         <li>

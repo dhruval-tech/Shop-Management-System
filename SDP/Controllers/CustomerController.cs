@@ -38,7 +38,16 @@ namespace SDP.Controllers
             this.hostingEnvironment = hostingEnvironment;
             //cartList.Add(0);
         }
-        
+
+        public IActionResult Contact()
+        {
+            ViewBag.Email = null;
+            //Console.WriteLine(HttpContext.Session.GetString("Email"));
+            ViewBag.Email = (HttpContext.Session.GetString("Email"));
+
+            return View();
+        }
+         
         public IActionResult Index()
         {
             ViewBag.Email = null;

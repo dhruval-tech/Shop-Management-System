@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<link rel="stylesheet" href="~/css/AdminFeature.css">
 <section class="hero-area">
     <div class="hero-slides owl-carousel">
         <!-- Single Hero Slide -->
@@ -15,7 +15,7 @@
                         <div class="hero-slides-content text-center">
                             @*<h6 data-animation="fadeInUp" data-delay="100ms"></h6>*@
                             <h2 data-animation="fadeinup" data-delay="300ms">latest products <span></span></h2>
-                            <a data-animation="fadeInUp" data-delay="500ms"  asp-action="ViewProducts" asp-controller="Product" class="btn oneMusic-btn mt-50">Discover <i class="fa fa-angle-double-right"></i></a>
+                            <a data-animation="fadeInUp" data-delay="500ms" asp-action="ViewProducts" asp-controller="Product" class="btn oneMusic-btn mt-50">Discover <i class="fa fa-angle-double-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,6 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="hero-slides-content text-center">
-                            @*<h6 data-animation="fadeInUp" data-delay="100ms"></h6>*@
                             <h2 data-animation="fadeInUp" data-delay="300ms">Enjoy our Service <span>Enjoy our Service</span></h2>
                             <a data-animation="fadeInUp" data-delay="500ms" asp-action="ViewProducts" asp-controller="Product" class="btn oneMusic-btn mt-50">Discover <i class="fa fa-angle-double-right"></i></a>
                         </div>
@@ -41,79 +40,195 @@
         </div>
     </div>
 </section>
-<div id="accordion">
-    <div class="card">
-        <div class="card-header" id="headingTwo">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
-                    Product
-                </button>
-            </h5>
+@*<div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+                        Product
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-lg-3 col-sm-6 space" style="width: 65%;text-align: center;justify-content: center;margin: 20px auto;">
+
+                            <img class="card-img-top rounded mb-3" src="customer.jfif" alt="Card image cap">
+                            <h5 class="card-title ">Add Product</h5>
+                            <a asp-action="AddProduct" asp-controller="Product" class="btn btn-primary"><b>Add Product</b></a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 space" style="width: 65%;text-align: center;justify-content: center;margin: 20px auto;">
+
+                            <img class="card-img-top rounded mb-3" src="customer.jfif" alt="Card image cap">
+                            <h5 class="card-title">Update Product</h5>
+                            <a asp-action="SearchProduct" asp-controller="Product" class="btn btn-primary"><b>Update Product</b></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body">
-                <div class="row text-center">
-                    <div class="col-lg-3 col-sm-6 space" style="width: 65%;text-align: center;justify-content: center;margin: 20px auto;">
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Customer
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    <div class="row text-center">
 
-                        <img class="card-img-top rounded mb-3" src="customer.jfif" alt="Card image cap">
-                        <h5 class="card-title ">Add Product</h5>
-                        <a asp-action="AddProduct" asp-controller="Product" class="btn btn-primary"><b>Add Product</b></a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 space" style="width: 65%;text-align: center;justify-content: center;margin: 20px auto;">
+                        <div class="col-lg-3 col-sm-6 space" style="width: 65%;text-align: center;justify-content: center;margin: 20px auto;">
 
-                        <img class="card-img-top rounded mb-3" src="customer.jfif" alt="Card image cap">
-                        <h5 class="card-title">Update Product</h5>
-                        <a asp-action="SearchProduct" asp-controller="Product" class="btn btn-primary"><b>Update Product</b></a>
+                            <img class="card-img-top rounded mb-3" src="customer.jfif" alt="Card image cap">
+                            <h5 class="card-title">Add Customer</h5>
+                            <a asp-action="AddCustomer" asp-controller="Customer" class="btn btn-primary"><b>Add Customer</b></a>
+                        </div>
+
                     </div>
-                   
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed " data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Staff
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-lg-3 col-sm-6 space" style="width: 65%;text-align: center;justify-content: center;margin: 20px auto;">
+
+                            <img class="card-img-top rounded mb-3" src="customer.jfif" alt="Card image cap">
+                            <h5 class="card-title ">Add Staff</h5>
+                            <a asp-action="AddStaff" asp-controller="Staff" class="btn btn-primary"><b>Add Staff</b></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+<section class="three-extradiv">
+    <div class="container">
+        <h1 class="text-center font-weight-bold"> OUR QUALITY FACTORS</h1>
+        <div class="row rowsetting">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 extra-div " data-toggle="modal"
+                 data-target="#exampleModalCenter1">
+                <a href="#"><img src="/img/bg-img/customer.svg" width="70" height="70" alt=""></a>
+
+                <h2 class="text-center">CUSTOMER</h2>
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 extra-div" data-toggle="modal" data-target="#exampleModalCenter2">
+                <a href="#"><img src="/img/bg-img/groceryy.svg" width="70" height="70" alt=""></a>
+                <h2 class="text-center">PRODUCT</h2>
+
+
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 extra-div" data-toggle="modal" data-target="#exampleModalCenter3">
+                <a href="#" class="center"><img src="/img/bg-img/leaderr.svg" width="70" height="70" alt=""></a>
+
+                <h2 class="text-center">STAFF</h2>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal for customer -->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Customer</h5>
+                <div type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fa fa-times"></i></span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col" style="margin-left: 100px">
+                        <div class="my-icon"><a asp-action="AddCustomer" asp-controller="Customer"><i class="fa fa-plus "></i></a></div>
+                        <div class="my-text">Add</div>
+                    </div>
+                    <div class="col " style="margin-left: 100px">
+                        <div class="my-icon"><i class="fa fa-pencil "></i></a></div>
+                        <div class="my-text">Update</div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<!-- Modal for product -->
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Product</h5>
+                <div type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fa fa-times"></i></span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col" style="margin-left: 100px">
+                        <div class="my-icon"><a asp-action="AddProduct" asp-controller="Product"><i class="fa fa-plus "></i></a></div>
+                        <div class="my-text" >Add</div>
+                    </div>
+                    <div class="col " style="margin-left: 100px">
+                        <div class="my-icon"><a asp-action="SearchProduct" asp-controller="Product"><i class="fa fa-pencil "></i></a></div>
+                        <div class="my-text" >Update</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="card">
-        <div class="card-header" id="headingTwo">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Customer
-                </button>
-            </h5>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body">
-                <div class="row text-center">
-                    
-                    <div class="col-lg-3 col-sm-6 space" style="width: 65%;text-align: center;justify-content: center;margin: 20px auto;">
+</div>
 
-                        <img class="card-img-top rounded mb-3" src="customer.jfif" alt="Card image cap">
-                        <h5 class="card-title">Add Customer</h5>
-                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                        <a asp-action="AddCustomer" asp-controller="Customer" class="btn btn-primary"><b>Add Customer</b></a>
-                    </div>
-                    
+<!-- Modal for staff -->
+<div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Staff</h5>
+                <div type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fa fa-times"></i></span>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header" id="headingThree">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed " data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Staff
-                </button>
-            </h5>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-            <div class="card-body">
-                <div class="row text-center">
-                    <div class="col-lg-3 col-sm-6 space" style="width: 65%;text-align: center;justify-content: center;margin: 20px auto;">
-
-                        <img class="card-img-top rounded mb-3" src="customer.jfif" alt="Card image cap">
-                        <h5 class="card-title ">Add Staff</h5>
-                        <a asp-action="AddStaff" asp-controller="Staff" class="btn btn-primary"><b>Add Staff</b></a>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col" style="margin-left: 100px">
+                        <div class="my-icon"><a asp-action="AddStaff" asp-controller="Staff"><i class="fa fa-plus "></i></a></div>
+                        <div class="my-text" >Add</div>
                     </div>
-                    
+                    <div class="col" style="margin-left: 100px">
+                        <div class="my-icon"><i class="fa fa-pencil "></i></div>
+                        <div class="my-text">Update</div>
+                    </div>
                 </div>
             </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
         </div>
     </div>
 </div>

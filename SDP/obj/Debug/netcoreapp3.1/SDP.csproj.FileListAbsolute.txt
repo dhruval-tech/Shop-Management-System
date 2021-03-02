@@ -175,5 +175,5 @@ D:\Dhruval\github\Shop-Management-System\SDP\bin\Debug\netcoreapp3.1\SDP.pdb
 D:\Dhruval\github\Shop-Management-System\SDP\bin\Debug\netcoreapp3.1\SDP.Views.pdb
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Index.cshtml.g.cs
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Profile.cshtml.g.cs
-D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\SDP.csprojAssemblyReference.cache
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Customer\MailInvoice.cshtml.g.cs
+D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Contact.cshtml.g.cs

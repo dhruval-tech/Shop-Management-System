@@ -1,0 +1,153 @@
+﻿<style >
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(shop-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    background-attachment: fixed;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'Pacifico', cursive;
+    color: #ffffff;
+    font-weight: bolder;
+    text-shadow: 5px 5px 10px black;
+    font-size: larger;
+    overflow: hidden;
+    /* clip-path: polygon(100% 0%,100% 75%,50% 100%,0% 75%,0% 0%); */
+}
+
+.rowsetting {
+    margin: 80px 0px;
+}
+
+.oneMusic-btn {
+    background-color: transparent;
+    /* -webkit-transition-duration: 500ms;
+      transition-duration: all 500ms; */
+    transition: all 300ms ease-in-out;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    min-width: 212px;
+    height: 49px;
+    color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 0;
+    padding: 0 30px;
+    font-size: 16px;
+    line-height: 47px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+    .oneMusic-btn:hover,
+    .oneMusic-btn:focus {
+        font-size: 16px;
+        font-weight: 700;
+        background-color: #f1f1f1;
+        color: #000;
+    }
+
+.three-extradiv {
+    /* width: 100; */
+    height: auto;
+    margin: 100px 0;
+    text-align: center;
+}
+
+.extra-div {
+    background: #f1f1f1;
+    border: medium none;
+    padding: 50px !important;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+    .extra-div h2,
+    .servicediv h2 {
+        font-size: 0.9rem;
+        margin: 20px 0 15px 0;
+        font-weight: bold;
+        line-height: 1.1;
+        word-spacing: 4px;
+    }
+
+    .extra-div:hover {
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+        transform: translateY(-20px);
+    }
+
+.navbar {
+    min-height: 70px;
+    color: tomato;
+}
+
+
+ul li a {
+    color: tomato;
+    transition: all 300ms ease-in-out;
+    font-size: 20px;
+}
+
+    ul li a:hover {
+        color: white;
+    }
+
+.tracking-in-expand {
+    letter-spacing: 2px;
+    -webkit-animation: tracking-in-expand 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+</style >

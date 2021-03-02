@@ -35,6 +35,8 @@ namespace SDP.Controllers
         [HttpPost]
         public IActionResult AddProduct(ProductViewModel model)
         {
+            HttpContext.Session.Remove("ProductName");
+            ViewBag.PName = null;
             if (ModelState.IsValid) {
                 string uniqueFileName = null;
                 if (model.Photo != null){
@@ -56,6 +58,8 @@ namespace SDP.Controllers
 
                 _context.Add(newProduct);
                 _context.SaveChanges();
+                HttpContext.Session.SetString("ProductName", model.Name);
+                ViewBag.PName = model.Name;
                 return RedirectToAction("ViewProducts", "Product");
             }
            
@@ -137,6 +141,7 @@ namespace SDP.Controllers
             ViewBag.Email = null;
             ViewBag.Email = (HttpContext.Session.GetString("Email"));
             var productsList = _context.products.ToList();
+            ViewBag.ProductName = (HttpContext.Session.GetString("ProductName"));
             return View(productsList);
         }
 
