@@ -64,24 +64,25 @@
                             <div class="classynav">
 
                                 <ul>
-                                    <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                                    @*<li><a asp-action="Index" asp-controller="Customer">Home</a></li>*@
 
                                     @*<li>
-                                        <a href="#">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a asp-action="Index" asp-controller="Home">Home</a></li>
-                                            <li><a asp-action="Index">Albums</a></li>
-                                            <li><a href="event.html">Events</a></li>
-                                            <li><a href="blog.html">News</a></li>
-                                            <li><a asp-action="Index">Contact</a></li>
-                                            <li><a asp-action="Index">Elements</a></li>
+            <a href="#">Pages</a>
+            <ul class="dropdown">
+                <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                <li><a asp-action="Index">Albums</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="blog.html">News</a></li>
+                <li><a asp-action="Index">Contact</a></li>
+                <li><a asp-action="Index">Elements</a></li>
 
-                                        </ul>
+            </ul>
 
-                                    </li>*@
-                                    <li><a asp-action="Contact" asp-controller="Customer">Contact</a></li>
+        </li>*@
+
                                     @if (SignInManager.IsSignedIn(User))
                                     {
+                                        <li><a asp-action="Index" asp-controller="Home">Home</a></li>
                                         <li>
                                             <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello Admin</a>
                                         </li>
@@ -91,8 +92,10 @@
                                             </form>
                                         </li>
                                     }
-                                    @if (ViewBag.Email != null)
+                                    else if (ViewBag.Email != null)
                                     {
+                                        <li><a asp-action="Index" asp-controller="Customer">Home</a></li>
+                                        <li><a asp-action="Contact" asp-controller="Customer">Contact</a></li>
                                         <li><a asp-action="Profile" asp-controller="Customer">@ViewBag.Email</a></li>
                                         <li>
                                             <form class="form-inline" asp-action="Logout" asp-controller="Account" method="post">
@@ -100,8 +103,10 @@
                                             </form>
                                         </li>
                                     }
-                                    @if (!(SignInManager.IsSignedIn(User)) && ViewBag.Email == null)
+                                    else  if(!(SignInManager.IsSignedIn(User)) && ViewBag.Email == null)
                                     {
+                                        <li><a asp-action="Index" asp-controller="Customer">Home</a></li>
+                                        <li><a asp-action="Contact" asp-controller="Customer">Contact</a></li>
                                         <li><a asp-action="login" asp-controller="account">Login</a></li>
                                     }
                                 </ul>
