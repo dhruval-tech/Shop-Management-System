@@ -177,3 +177,4 @@ D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Profile.cshtml.g.cs
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Customer\MailInvoice.cshtml.g.cs
 D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Contact.cshtml.g.cs
+D:\Dhruval\github\Shop-Management-System\SDP\obj\Debug\netcoreapp3.1\SDP.csprojAssemblyReference.cache
