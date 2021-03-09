@@ -6,6 +6,7 @@
 <ul>
     @if (SignInManager.IsSignedIn(User))
     {
+        <li><a asp-action="Index" asp-controller="Home">Home</a></li>
         <li>
             <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello Admin</a>
         </li>
@@ -23,7 +24,9 @@
             <li class="nav-item">
                 <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
             </li>*@
-
+        <li><a asp-action="Index" asp-controller="Customer">Home</a></li>
+        <li><a asp-action="Contact" asp-controller="Customer">Contact</a></li>
+        <li><a asp-action="AboutUs" asp-controller="Customer">About Us</a></li>
         <li><a asp-action="Login" asp-controller="Account">Login</a></li>
 
         @*<li><a asp-action="register" asp-controller="Account">Register</a></li>*@

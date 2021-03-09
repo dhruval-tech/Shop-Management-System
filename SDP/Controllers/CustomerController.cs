@@ -48,6 +48,10 @@ namespace SDP.Controllers
             return View();
         }
          
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
         public IActionResult Index()
         {
             ViewBag.Email = null;
@@ -338,8 +342,8 @@ namespace SDP.Controllers
             //{
             //    smtp.Send(mess);
             //}
-            string to = "dhruvalgandhi2000@gmail.com"; //To address    
-            string from = "dhruval.gaana@gmail.com"; //From address    
+            string to = "naiyaprajapati2000@gmail.com"; //To address    
+            string from = "naiyaprajapati2022@gmail.com"; //From address    
             MailMessage message = new MailMessage(from, to);
 
             string mailbody = "Your UserId is:" + ViewBag.Email + "\nYour password is" + pwd + "\nYou can now login with given credentials :)";
@@ -349,7 +353,7 @@ namespace SDP.Controllers
             message.IsBodyHtml = true;
             SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Gmail smtp    
             System.Net.NetworkCredential basicCredential1 = new
-            System.Net.NetworkCredential("dhruval.gaana@gmail.com", "Dhruv@l123");
+            System.Net.NetworkCredential("naiyaprajapati2022@gmail.com", "Virat@123");
             client.EnableSsl = true;
             client.UseDefaultCredentials = false;
             client.Credentials = basicCredential1;
