@@ -354,7 +354,7 @@ namespace SDP.Controllers
             message.IsBodyHtml = true;
             SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Gmail smtp    
             System.Net.NetworkCredential basicCredential1 = new
-            System.Net.NetworkCredential("gandhidhruval610@gmail.com", "Trush@610");
+            System.Net.NetworkCredential("gandhidhruval610@gmail.com", "");
             client.EnableSsl = true;
             client.UseDefaultCredentials = false;
             client.Credentials = basicCredential1;
