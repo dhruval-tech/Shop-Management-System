@@ -8608,19 +8608,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+    "C:\\Users\\Dhruval\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\SDP\\Project\\Shop-Management-System\\SDP\\SDP.csproj",
+      "projectUniqueName": "D:\\Dhruval\\github\\Shop-Management-System\\SDP\\SDP.csproj",
       "projectName": "SDP",
-      "projectPath": "G:\\SDP\\Project\\Shop-Management-System\\SDP\\SDP.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "G:\\SDP\\Project\\Shop-Management-System\\SDP\\obj\\",
+      "projectPath": "D:\\Dhruval\\github\\Shop-Management-System\\SDP\\SDP.csproj",
+      "packagesPath": "C:\\Users\\Dhruval\\.nuget\\packages\\",
+      "outputPath": "D:\\Dhruval\\github\\Shop-Management-System\\SDP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dhruval\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8632,7 +8632,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -8644,7 +8643,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
@@ -8689,7 +8687,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

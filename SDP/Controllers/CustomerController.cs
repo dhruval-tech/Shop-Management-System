@@ -161,8 +161,9 @@ namespace SDP.Controllers
                         address = model.address
                     };
                      Email = model.email;
-               // Console.WriteLine(Email);
-                    _context.Add(newcustomer);
+                    HttpContext.Session.SetString("Cus_Email", model.email);
+                // Console.WriteLine(Email);
+                _context.Add(newcustomer);
                     _context.SaveChanges();
 
 
@@ -342,18 +343,18 @@ namespace SDP.Controllers
             //{
             //    smtp.Send(mess);
             //}
-            string to = "naiyaprajapati2000@gmail.com"; //To address    
-            string from = "naiyaprajapati2022@gmail.com"; //From address    
+            string to = (HttpContext.Session.GetString("Cus_Email")); ; //To address    
+            string from = "gandhidhruval610@gmail.com"; //From address    
             MailMessage message = new MailMessage(from, to);
 
-            string mailbody = "Your UserId is:" + ViewBag.Email + "\nYour password is" + pwd + "\nYou can now login with given credentials :)";
+            string mailbody = "Your UserId is: " + to + " and Your password is: " + pwd + ", You can now login with given credentials to see your invoice:)";
             message.Subject = "Congratulations!, Purchase is Successfull";
             message.Body = mailbody;
             message.BodyEncoding = Encoding.UTF8;
             message.IsBodyHtml = true;
             SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Gmail smtp    
             System.Net.NetworkCredential basicCredential1 = new
-            System.Net.NetworkCredential("naiyaprajapati2022@gmail.com", "Virat@123");
+            System.Net.NetworkCredential("gandhidhruval610@gmail.com", "Trush@610");
             client.EnableSsl = true;
             client.UseDefaultCredentials = false;
             client.Credentials = basicCredential1;
