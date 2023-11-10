@@ -21,7 +21,7 @@ customers to watch all the available products from home.
 ### Tools: 
  - Git 
 ### Platform:
- - icrosoft Visual Studio
+ - Microsoft Visual Studio
 
 ### Use Case Diagram:
 
